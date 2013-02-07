@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @article %> |
-<%= link_to 'Back', articles_path %>
+<%= link_to raw('<i class="icon-eye-open icon-white"></i> Show'), @article, :class => 'btn btn-primary' %> 
+
+<%= link_to raw('Back'), articles_path, :class => 'btn btn-primary' %>	

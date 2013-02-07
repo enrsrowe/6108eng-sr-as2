@@ -6,15 +6,17 @@
 </p>
 
 <p>
-  <b>Body:</b>
-  <%= @event.body %>
-</p>
-
-<p>
   <b>Date:</b>
   <%= @event.date %>
 </p>
 
+<p>
+  <b>Body:</b>
+  <%= @event.body %>
+</p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<br>
+<%= link_to raw('&laquo; Back'), events_path, :class => 'btn btn-primary' %>	
+<%= link_to raw('<i class="icon-edit icon-white"></i> Edit'), edit_event_path(@event), :class => 'btn btn-inverse' %>
+
+

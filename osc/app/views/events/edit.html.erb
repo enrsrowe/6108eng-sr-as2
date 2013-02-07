@@ -2,5 +2,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @event %> |
-<%= link_to 'Back', events_path %>
+
+<%= link_to raw('<i class="icon-eye-open icon-white"></i> Show'), @event, :class => 'btn btn-primary' %>
+<%= link_to raw('Back'), events_path, :class => 'btn btn-primary' %>	
