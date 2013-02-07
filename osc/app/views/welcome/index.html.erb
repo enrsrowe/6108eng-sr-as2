@@ -36,11 +36,16 @@
 
         	<% @articles.each do |article| %>
 					    <h3><%= article.title %></h3>
+              <p><%= article.body %></p>
+
               <% if article.updated_at != article.created_at %>
                 <span class="label label-success"><b>Updated: </b><%= article.updated_at.strftime("%d/%m/%Y - %I:%M %p") %></span>
+              <% else %>
+                <span class="label"><b>Posted: </b><%= article.created_at.strftime("%d/%m/%Y") %></span>
               <% end %>
+              <p></p>
 
-					    <p><%= article.body %></p>
+					    
 					    <%= link_to raw('Read More &raquo;'), article, :class => 'btn btn-primary' %>
 					<% end %>
 
