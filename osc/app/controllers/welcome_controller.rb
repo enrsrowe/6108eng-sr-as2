@@ -2,7 +2,6 @@ class WelcomeController < ApplicationController
 
   def index
     @articles = Article.all.reverse #Reverses post order for newest at top.
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @articles }
