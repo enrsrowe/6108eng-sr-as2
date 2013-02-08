@@ -1,14 +1,23 @@
 <p id="notice"><%= notice %></p>
 
+<!-- Breadcrumbs -->
+<ul class="breadcrumb">
+  <li><%= link_to raw('Articles'), articles_path %><span class="divider">/</span></li>
+  <li class="active"><%= @article.title %></li>
+</ul>
+
+<!--Display Article -->
 <h2><%= @article.title %></h2>
 
 <p><%= @article.body %></p>
 
+<!-- Show Created/Updated -->
 <span class="label"><b>Created: </b><%= @article.created_at.strftime("%d/%m/%Y - %I:%M %p") %></span> 
 <% if @article.updated_at != @article.created_at %>
 	<span class="label label-success"><b>Updated: </b><%= @article.updated_at.strftime("%d/%m/%Y - %I:%M %p") %></span>
 <% end %>
 
+<!-- Buttons -->
 <br><br>
 <%= link_to raw('&laquo; All Articles'), articles_path, :class => 'btn btn-primary' %>
 

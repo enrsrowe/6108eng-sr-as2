@@ -43,10 +43,10 @@
               <% else %>
                 <span class="label"><b>Posted: </b><%= article.created_at.strftime("%d/%m/%Y") %></span>
               <% end %>
-              <p></p>
-
-					    
+              <p></p>					    
 					    <%= link_to raw('Read More &raquo;'), article, :class => 'btn btn-primary' %>
+              <hr>
+              <br>
 					<% end %>
 
         </div>
