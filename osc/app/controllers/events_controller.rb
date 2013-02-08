@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
+    @events = Event.all.reverse #Allows events to be displayed newest first.
 
     respond_to do |format|
       format.html # index.html.erb

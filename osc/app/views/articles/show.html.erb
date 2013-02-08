@@ -1,17 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @article.title %>
-</p>
+<h2><%= @article.title %></h2>
 
-<p>
-  <b>Body:</b>
-  <%= @article.body %>
-</p>
+<p><%= @article.body %></p>
 
-<br>
-<%= link_to raw('&laquo; Back'), articles_path, :class => 'btn btn-primary' %>
-<%= link_to raw('<i class="icon-edit icon-white"></i> Edit'), edit_article_path(@article), :class => 'btn btn-inverse' %>
+<span class="label"><b>Created: </b><%= @article.created_at.strftime("%d/%m/%Y - %I:%M %p") %></span> 
+<% if @article.updated_at != @article.created_at %>
+	<span class="label label-success"><b>Updated: </b><%= @article.updated_at.strftime("%d/%m/%Y - %I:%M %p") %></span>
+<% end %>
+
+<br><br>
+<%= link_to raw('&laquo; All Articles'), articles_path, :class => 'btn btn-primary' %>
+
+<!-- <%= link_to raw('<i class="icon-edit icon-white"></i> Edit'), edit_article_path(@article), :class => 'btn btn-inverse' %> -->
+
+<%= link_to raw('<i class="icon-home icon-white"></i> Home Page'), '../welcome/index.html', :class => 'btn btn-primary' %>
+
+
+
 
 
