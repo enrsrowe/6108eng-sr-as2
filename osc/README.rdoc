@@ -6,6 +6,8 @@ From the articles/events controllers all articles can be viewed, edited, deleted
 
 'application.html.erb' in the 'layouts' folder contains the header and footer of each page thus not needing to put it in every single page. Keeps code DRY.
 
+When being viewed on a new computer after downloaded from github there may be errors.  rake db:migrate may fix this but will delete data in tables.
+
 == Controllers
 
 Welcome - Contains all the static pages of the website. index and whatson are able to access articles and events.
